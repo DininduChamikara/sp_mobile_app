@@ -43,8 +43,10 @@ class Login extends StatelessWidget {
               )),
             ),
             Container(
+              margin: const EdgeInsets.symmetric(vertical: 5),
               decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 59, 81, 118),
+                  border: Border.all(color: Colors.red),
                   borderRadius: BorderRadius.circular(10)),
               height: 60,
               alignment: Alignment.center,
@@ -54,6 +56,55 @@ class Login extends StatelessWidget {
                     hintText: "Phone, email or username",
                     border: InputBorder.none),
               ),
+            ),
+            Container(
+                margin: const EdgeInsets.symmetric(vertical: 5),
+                decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 59, 81, 118),
+                    border: Border.all(color: Colors.red),
+                    borderRadius: BorderRadius.circular(10)),
+                height: 60,
+                alignment: Alignment.center,
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  children: const [
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                            hintText: "Password", border: InputBorder.none),
+                      ),
+                    ),
+                    Icon(Icons.password)
+                  ],
+                )),
+            Container(
+              margin: const EdgeInsets.only(top: 60),
+              alignment: Alignment.center,
+              child: Column(children: [
+                SizedBox(
+                  width: 230,
+                  child: Row(
+                    children: const [
+                      Text("Don't have an account? "),
+                      Text(
+                        "Register",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 59, 81, 118),
+                      border: Border.all(color: Colors.red),
+                      borderRadius: BorderRadius.circular(10)),
+                  width: 200,
+                  child: TextButton(
+                    child: const Text("Sign in"),
+                    onPressed: (() {}),
+                  ),
+                )
+              ]),
             )
           ],
         ));
