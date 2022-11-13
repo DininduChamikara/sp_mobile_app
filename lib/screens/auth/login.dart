@@ -6,14 +6,9 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Side Project RS",
-          style: Theme.of(context).appBarTheme.titleTextStyle,
-        ),
-      ),
       body: Container(
-          padding: const EdgeInsets.all(24),
+          padding:
+              const EdgeInsets.only(top: 40, left: 24, right: 24, bottom: 24),
           child: Column(
             children: [
               const Align(
@@ -24,7 +19,7 @@ class Login extends StatelessWidget {
               ),
               const Align(
                 alignment: Alignment.centerLeft,
-                child: Text("Data"),
+                child: Text("Welcome Back"),
               ),
               const Spacer(),
               Container(
@@ -33,8 +28,7 @@ class Login extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: const TextField(
-                  decoration:
-                      InputDecoration(hintText: "Phone, email or username"),
+                  decoration: InputDecoration(hintText: "Email Address"),
                 ),
               ),
               Container(
@@ -53,19 +47,15 @@ class Login extends StatelessWidget {
                   )),
               Container(
                 margin: const EdgeInsets.only(top: 60),
-                alignment: Alignment.center,
                 child: Column(children: [
-                  SizedBox(
-                    width: 230,
-                    child: Row(
-                      children: const [
-                        Text("Don't have an account? "),
-                        Text(
-                          "Register",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
+                  Row(
+                    children: const [
+                      Text("Don't have an account? "),
+                      Text(
+                        "Register",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 20),

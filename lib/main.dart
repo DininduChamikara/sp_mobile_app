@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sp_mobile_app/config/app_router.dart';
 import 'package:sp_mobile_app/screens/auth/login.dart';
 import 'package:sp_mobile_app/util/theme.dart';
 
@@ -12,25 +13,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: basicTheme(),
-      home: const Home(),
+      routerConfig: router,
     );
-  }
-}
-
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return const Login();
   }
 }

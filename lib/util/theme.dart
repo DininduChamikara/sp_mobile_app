@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 ThemeData basicTheme() {
   TextTheme _textTheme(TextTheme base) {
     return base.copyWith(
       headline1: base.headline1?.copyWith(
         color: Colors.grey.shade800,
+      ),
+      bodyText2: base.bodyText2?.copyWith(
+        color: Colors.grey.shade800,
+        // fontFamily: GoogleFonts.poppins().toString(),
+        fontSize: 18,
       ),
     );
   }
