@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sp_mobile_app/screens/auth/login.dart';
 import 'package:sp_mobile_app/util/theme.dart';
 
@@ -16,45 +15,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(
-      //   textTheme: GoogleFonts.poppinsTextTheme(),
-      //   primarySwatch: Colors.lime,
-      // ),
       theme: basicTheme(),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const Home(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Home> createState() => _HomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title,
-              style: GoogleFonts.poppins(
-                fontSize: 24,
-              )),
-        ),
-        body:
-            const Login() // This trailing comma makes auto-formatting nicer for build methods.
-        );
+    return const Login();
   }
 }

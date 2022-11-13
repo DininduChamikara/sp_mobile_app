@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 ThemeData basicTheme() {
   TextTheme _textTheme(TextTheme base) {
     return base.copyWith(
-        headline1: base.headline1?.copyWith(
-      fontFamily: GoogleFonts.poppins(fontSize: 30).toString(),
-      color: Colors.grey.shade800,
-    ));
+      headline1: base.headline1?.copyWith(
+        color: Colors.grey.shade800,
+      ),
+    );
   }
 
   final ThemeData baseThemeData = ThemeData.light();
@@ -15,6 +14,9 @@ ThemeData basicTheme() {
   return baseThemeData.copyWith(
     textTheme: _textTheme(baseThemeData.textTheme),
     primaryColor: Colors.green,
-    appBarTheme: const AppBarTheme(color: Colors.black),
+    appBarTheme: const AppBarTheme(color: Colors.brown),
+    elevatedButtonTheme: const ElevatedButtonThemeData(
+        style: ButtonStyle(
+            backgroundColor: MaterialStatePropertyAll<Color>(Colors.brown))),
   );
 }

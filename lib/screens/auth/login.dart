@@ -1,112 +1,90 @@
 import 'package:flutter/material.dart';
 
-// Material
-
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          children: [
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: (Text(
-                "Let's sign you in.",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Side Project RS",
+          style: Theme.of(context).appBarTheme.titleTextStyle,
+        ),
+      ),
+      body: Container(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            children: [
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Let's sign you in.",
                 ),
-              )),
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: (Text(
-                "Welcome back.",
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.red,
-                ),
-              )),
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: (Text(
-                "You've been missed!",
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.red,
-                ),
-              )),
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 5),
-              decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 59, 81, 118),
-                  border: Border.all(color: Colors.red),
-                  borderRadius: BorderRadius.circular(10)),
-              height: 60,
-              alignment: Alignment.center,
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: const TextField(
-                decoration: InputDecoration(
-                    hintText: "Phone, email or username",
-                    border: InputBorder.none),
               ),
-            ),
-            Container(
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Data"),
+              ),
+              const Spacer(),
+              Container(
                 margin: const EdgeInsets.symmetric(vertical: 5),
-                decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 59, 81, 118),
-                    border: Border.all(color: Colors.red),
-                    borderRadius: BorderRadius.circular(10)),
                 height: 60,
                 alignment: Alignment.center,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Row(
-                  children: const [
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                            hintText: "Password", border: InputBorder.none),
-                      ),
-                    ),
-                    Icon(Icons.password)
-                  ],
-                )),
-            Container(
-              margin: const EdgeInsets.only(top: 60),
-              alignment: Alignment.center,
-              child: Column(children: [
-                SizedBox(
-                  width: 230,
+                child: const TextField(
+                  decoration:
+                      InputDecoration(hintText: "Phone, email or username"),
+                ),
+              ),
+              Container(
+                  margin: const EdgeInsets.symmetric(vertical: 5),
+                  height: 60,
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     children: const [
-                      Text("Don't have an account? "),
-                      Text(
-                        "Register",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      )
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(hintText: "Password"),
+                        ),
+                      ),
                     ],
+                  )),
+              Container(
+                margin: const EdgeInsets.only(top: 60),
+                alignment: Alignment.center,
+                child: Column(children: [
+                  SizedBox(
+                    width: 230,
+                    child: Row(
+                      children: const [
+                        Text("Don't have an account? "),
+                        Text(
+                          "Register",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 59, 81, 118),
-                      border: Border.all(color: Colors.red),
-                      borderRadius: BorderRadius.circular(10)),
-                  width: 200,
-                  child: TextButton(
-                    child: const Text("Sign in"),
-                    onPressed: (() {}),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        child: const Text("Login"),
+                        style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 20),
+                          elevation: 0,
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
                   ),
-                )
-              ]),
-            )
-          ],
-        ));
+                ]),
+              )
+            ],
+          )),
+    );
   }
 }
