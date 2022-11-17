@@ -6,7 +6,7 @@ import 'package:sp_mobile_app/screens/home.dart';
 final GoRouter router = GoRouter(
   routes: <GoRoute>[
     GoRoute(
-      path: '/login',
+      path: '/ooo',
       builder: (BuildContext context, GoRouterState state) {
         return const Login();
       },

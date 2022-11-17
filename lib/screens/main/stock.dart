@@ -1,9 +1,19 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sp_mobile_app/components/title.dart';
+import 'package:sp_mobile_app/config/constants.dart';
 
 class Stock extends StatelessWidget {
   const Stock({Key? key}) : super(key: key);
+
+  void getAllInventories() async {
+    try {
+      var response = await Dio().get(Constants.BASE_URL);
+      print(response);
+    } catch (e) {
+      print(e);
+    }
+  }
 
   static const List<String> _categories = <String>[
     "Category One",
@@ -15,6 +25,8 @@ class Stock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    getAllInventories();
+
     return Padding(
       padding: const EdgeInsets.all(24),
       child: Column(
