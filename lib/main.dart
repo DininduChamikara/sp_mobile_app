@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sp_mobile_app/config/app_router.dart';
-import 'package:sp_mobile_app/screens/auth/login.dart';
 import 'package:sp_mobile_app/util/theme.dart';
 
 void main() {
