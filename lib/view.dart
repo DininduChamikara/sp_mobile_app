@@ -15,7 +15,7 @@ class ViewPage extends StatelessWidget {
               Icon(Icons.close),
             ],
           ),
-          FundContent()
+          const FundContent()
         ],
       ),
     );
