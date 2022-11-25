@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:sp_mobile_app/components/title.dart';
 
 class Customers extends StatelessWidget {
@@ -29,7 +30,9 @@ class Customers extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          return context.go('/add_customer');
+        },
         child: const Icon(Icons.add),
       ),
     );
